@@ -84,6 +84,8 @@ xlc )
   am_opt=--include-deps;;
 esac
 
+autoreconf -fi
+
 for coin in `find $srcdir -name configure.in -print`
 do 
   dr=`dirname $coin`
