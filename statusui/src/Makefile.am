@@ -42,5 +42,5 @@ captstatusui_SOURCES = \
 	calibrationsettingsdlg.c calibrationsettingsdlg.h
 
 
-captstatusui_LDADD = @PACKAGE_LIBS@ $(INTLLIBS) -lxml2 -lcups ../cnsktmodule/libcnsktmodule.la
+captstatusui_LDADD = @PACKAGE_LIBS@ $(INTLLIBS) -lxml2 -lcups -lpthread ../cnsktmodule/libcnsktmodule.la
 
