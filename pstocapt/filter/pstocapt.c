@@ -539,7 +539,7 @@ char* make_cmd_param(cups_option_t *p_cups_opt, int num_opt,
 	strcat(gs_exec_buf, "/");
 	strcat(gs_exec_buf, GS_BIN);
 	snprintf(gs_cmd_buf, 1023,
-		 "%s -r%d -q -dNOPROMPT -dSAFER -sDEVICE=pgmraw -sOutputFile=- -| ",
+		 "%s -r%d -q -sstdout=/dev/null -sstderr=/dev/null -dNOPROMPT -dSAFER -sDEVICE=pgmraw -sOutputFile=- -| ",
 			 gs_exec_buf, reso);
 
 	p_job_attr = make_job_attr(p_ppd, p_ppd_name, p_cups_opt, num_opt);
